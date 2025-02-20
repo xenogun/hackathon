@@ -4,7 +4,7 @@ const initialState = {
   user: null,
   isConnected: false,
 };
-const authSlice = createSlice({
+export const authSlice = createSlice({
   name: "connected",
   initialState,
   reducers: {
