@@ -34,13 +34,13 @@ export default function ParallaxPage() {
           {["heartfruit.jpg", "oldwoman.jpg", "yoga.jpg"].map((image, index) => (
             <div
               key={image}
-              className="relative bg-black border rounded-lg  hover:-translate-y-4 transition-all duration-200 group h-96 w-screen"
+              className="relative bg-black border rounded-lg  hover:-translate-y-4 transition-all duration-200 group h-96 w-full"
               style={{ transform: `translateY(${offsetY * (0.4 - index * 0.1)}px)` }}
             >
               <img
                 src={`/${image}`}
                 alt={image.split(".")[0]}
-                className="absolute inset-0 object-cover w-full max-h-full"  
+                className="absolute inset-0 object-cover w-full h-full"  
               />
               <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-70 transition-all duration-300"></div>
               <div className="absolute inset-0 flex justify-center items-center opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">

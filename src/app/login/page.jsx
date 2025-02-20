@@ -6,9 +6,9 @@ export default () => {
     const [password,setPassword]=useState('')
     const [users,setUsers]=useState([])
   const submit = async (e) => {
+    e.preventDefault();
     try{
-        e.preventDefault();
-        const response = await axios.post("http://localhost:5555/login")
+        const response = await axios.post("http://localhost:5000/login")
         .then((response)=>setUsers(response.data))
     }catch(e){
         console.error('error logging in')
